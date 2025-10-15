@@ -8,6 +8,11 @@
   <body>
     <div>
       <h3>All Users</h3>
+      <div style="margin-bottom: 15px;">
+        <input type="text" ng-model="searchQuery" placeholder="search..." />
+        <button ng-click="search()">Search</button>
+        <button ng-click="load()">Reset</button>
+      </div>
       <div ng-if="users/length===0">No users yet.</div>
       <div ng-repeat="u in users" class="card">
         <strong>{{u.name}}</strong> -- {{u.phone}}<br />

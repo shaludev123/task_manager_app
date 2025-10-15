@@ -63,5 +63,21 @@ angular
       );
     };
 
+    $scope.search = function () {
+      if (!$scope.searchQuery || $scope.searchQuery.trim() === "") {
+        $scope.load();
+        return;
+      }
+
+      ApiService.search($scope.searchQuery).then(
+        function (res) {
+          $scope.users = res.data.users;
+        },
+        function () {
+          alert("Search failed!");
+        }
+      );
+    };
+
     $scope.load();
   });

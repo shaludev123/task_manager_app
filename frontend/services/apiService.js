@@ -14,4 +14,7 @@ angular.module("taskApp").service("ApiService", function ($http, API_BASE) {
   this.delete = function (id) {
     return $http.post(API_BASE + "delete.php", { id: id });
   };
+  this.search = function(query){
+    return $http.get(API_BASE + 'search.php?query=' + encodeURIComponent(query));
+  };
 });
