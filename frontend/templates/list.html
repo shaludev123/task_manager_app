@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List</title>
+  </head>
+  <body>
+    <div>
+      <h3>All Users</h3>
+      <div ng-if="users/length===0">No users yet.</div>
+      <div ng-repeat="u in users" class="card">
+        <strong>{{u.name}}</strong> -- {{u.phone}}<br />
+        <small>{{u.address}}</small><br />
+        <button ng-click="edit(u.id)">Edit</button>
+        <button ng-click="del(u.id)">Delete</button>
+      </div>
+    </div>
+  </body>
+</html>

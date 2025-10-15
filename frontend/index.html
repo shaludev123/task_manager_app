@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="taskApp">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task Manager</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="services/apiService.js"></script>
+    <script src="controllers/mainContoller.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .card {
+        padding: 12px;
+        border: 1px solid #ddd;
+        margin-bottom: 8px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Task Manager</h2>
+    <a href="#!/add">Add User</a> | <a href="#!/list">User List</a>
+    <div ng-view></div>
+  </body>
+</html>
